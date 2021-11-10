@@ -1,0 +1,1 @@
+# Vadim-Ksendzov-s-QA-Course
