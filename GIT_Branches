@@ -1,0 +1,103 @@
+1. На локальном репозитории сделать ветки для:
+	----------------------------------
+	- Postman
+
+	git branch Postman
+	----------------------------------
+	- Jmeter
+
+	git branch Jmeter
+	----------------------------------
+	- CheckLists
+
+	git branch CheckLists
+	----------------------------------
+	- Bag Reports
+
+	git branch Bug_Reports
+	----------------------------------
+	- SQL
+
+	git branch SQL
+	----------------------------------
+	- Charles
+
+	git branch Charles
+	----------------------------------
+	- Mobile testing
+
+	git branch Mobile_Testing
+	----------------------------------
+2. Запушить все ветки на внешний репозиторий
+
+git push origin --all
+----------------------------------
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+git checkout Bug_Reports
+vim bug_reports.txt
+
+1) ID
+2) Summary
+3) Environment
+4) Description
+	- Description
+	- Expected result
+	- Actual result
+	- Requirements
+	- Reproducibility
+	- Workaround
+5) STR (Steps to reproduce)
+6) Severity
+7) Priority
+8) Symptom
+9) Attachments
+----------------------------------
+4. Запушить структуру багрепорта на внешний репозиторий
+
+git add bug_reports.txt
+git commit -m "bug_reports_structure"
+git push -u origin Bug_Reports
+----------------------------------
+5. Вмержить ветку Bag Reports в Main
+
+git checkout main
+git merge Bug_Reports
+----------------------------------
+6. Запушить main на внешний репозиторий
+
+git push -u origin main
+----------------------------------
+7. В ветке CheckLists набросать структуру чек листа
+
+git checkout CheckLists
+vim checklists.txt
+
+1) ID
+2) Description
+3) Status
+	- Pass
+	- Fail
+	- Blocked
+4) Expected result
+5) Bug (link)
+----------------------------------
+8. Запушить структуру на внешний репозиторий
+
+git add checklists.txt
+git commit -m "checklists_structure"
+git push -u origin CheckLists
+----------------------------------
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+Click Compare & pull request
+Write a comment
+Click Create pull request
+Click Merge pull request
+Confirm merge
+----------------------------------
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+git checkout main
+git pull
+----------------------------------
